@@ -42,7 +42,7 @@ SuperTokens.init({
   appInfo: {
       appName: "licoricepizza",
       apiDomain: "https://licorice-backend.onrender.com",
-      websiteDomain: "",
+      websiteDomain: "https://iridescent-llama.netlify.app",
       apiBasePath: "/auth",
       websiteBasePath: "/auth"
   },
