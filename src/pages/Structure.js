@@ -40,6 +40,7 @@ import { Link } from 'react-router-dom';
 
 
 import {useSearchParams} from 'react-router-dom';
+import { Buffer } from 'buffer';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -52,7 +53,7 @@ export default function SidebarWithHeader({children}) {
   const toast = useToast()
 
 
-  let REACT_APP_NOTION_AUTH_URL = process.env.REACT_APP_NOTION_AUTH_URL;
+  let REACT_APP_NOTION_AUTH_URL =   process.env.REACT_APP_NOTION_AUTH_URL;
   let [searchParams, setSearchParams] = useSearchParams()
   let navigate = useNavigate();
 
