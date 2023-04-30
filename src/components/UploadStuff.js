@@ -17,6 +17,8 @@ import React from 'react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom';
 
+import {Link as ChaLink} from 'chakra-ui/react';
+
 
 import { useToast } from '@chakra-ui/react'
 import axiosInstance from '../axios';
@@ -97,9 +99,12 @@ export default function UploadStuff() {
             <Text fontSize="md" fontWeight="bold" color="blue.700" pb={2}>
                 Integrate Notion
             </Text>
-            <Link href={REACT_APP_NOTION_AUTH_URL} isExternal>
+
+            <ChaLink color={'purple.400'} href={process.env.REACT_APP_NOTION_AUTH_URL} isExternal>
+              <Button>
                 Opt-in <ExternalLinkIcon mx='2px' />
-            </Link>
+              </Button>
+            </ChaLink>
           </Box>
 
 
