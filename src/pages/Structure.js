@@ -49,6 +49,7 @@ const LinkItems= [
 ];
 
 export default function SidebarWithHeader({children}) {
+  const toast = useToast()
 
 
   let REACT_APP_NOTION_AUTH_URL = process.env.REACT_APP_NOTION_AUTH_URL;
