@@ -37,12 +37,62 @@ import { ReactText } from 'react';
 import { signOut } from "supertokens-auth-react/recipe/passwordless";
 
 
+import { useNavigate } from 'react-router-dom';
 
 const LinkItems= [
   { name: 'Home', icon: FiHome , href: '/'},
+  {name: 'Integrations', icon: FiTrendingUp, href: '/integrations'},
 ];
 
 export default function SidebarWithHeader({children}) {
+
+
+  let REACT_APP_NOTION_AUTH_URL = process.env.REACT_APP_NOTION_AUTH_URL;
+  let [searchParams, setSearchParams] = useSearchParams()
+  let navigate = useNavigate();
+
+    React.useEffect(() => {
+
+        const code = searchParams.get("code")
+        if (code!=null && code!='' && code!=undefined)
+      {
+            console.log('code',code);
+            let credentials = process.env.REACT_APP_NOTION_CLIENT_ID + ":" + process.env.REACT_APP_NOTION_CLIENT_SECRET;
+            const encodedCredentials = Buffer.from(credentials).toString('base64');
+            console.log('encodedCredentials',encodedCredentials);
+            const baseURL = 'https://licorice-backend.onrender.com'
+            const axiosInstance = axios.create({ 
+                baseURL: baseURL,
+                headers: {
+                    'Content-Type': 'application/json',
+                    accept: 'application/json',
+                }, 
+            });
+
+            axiosInstance.post(`/api/notion_code`, {
+                'code': code}
+                )
+            .then((res) => {    
+                console.log(res.data);
+                toast({
+                  title: 'Notion sync started successfully',
+                  description: "We've added the document to our index.",
+                  status: 'success',
+                  duration: 4000,
+                  isClosable: true,
+                })
+                navigate("/");
+
+            })    
+            .catch(err => {
+                console.log(err)   
+            });
+        }
+
+    }, [searchParams]);
+
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -112,7 +162,7 @@ const NavItem = ({ icon, href, children, ...rest }) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
+          bg: 'purple.400',
           color: 'white',
         }}
         {...rest}>

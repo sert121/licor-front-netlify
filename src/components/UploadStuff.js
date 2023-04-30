@@ -13,7 +13,9 @@ import {
     Spacer,
     Input,
   } from '@chakra-ui/react';
-  import React from 'react';
+import React from 'react';
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 
 import { useToast } from '@chakra-ui/react'
 import axiosInstance from '../axios';
@@ -21,6 +23,7 @@ import axiosInstance from '../axios';
 export default function UploadStuff() {
       const toast = useToast()
 
+    let REACT_APP_NOTION_AUTH_URL = process.env.REACT_APP_NOTION_AUTH_URL;
     const [file, setFile] = React.useState();
 
     const handleFileChange = (e) => {
@@ -31,28 +34,6 @@ export default function UploadStuff() {
       }
     };
   
-    const handleUploadClick = () => {
-      if (!file) {
-        return;
-      }
-      //  update the location
-      fetch('http://localhost:8000/api/add_docs', {
-        method: 'POST',
-        upload_file: file,
-        collection_name:'default_collection',
-        // 👇 Set headers manually for single file upload
-        headers: {
-          'content-type': file.type,
-          'content-length': `${file.size}`, // 👈 Headers need to be a string
-        },
-      })
-        .then((res) => {res.json();
-
-        })
-        .then((data) => console.log(data, 'uploaded'))
-        .catch((err) => console.error(err, 'error'));
-
-    };
 
     const handleSubmitFile = (e) => {
       e.preventDefault();
@@ -100,7 +81,7 @@ export default function UploadStuff() {
             </Button>
           </Box>
 
-          {/* <Box
+          <Box
             backgroundColor="white"
             boxShadow="md"
             borderRadius="md"
@@ -113,13 +94,12 @@ export default function UploadStuff() {
             alignItems="space-between"
           >
             <Text fontSize="md" fontWeight="bold" color="blue.700" pb={2}>
-                Add Notion Database
+                Integrate Notion
             </Text>
-            <Input type={'file'} borderWidth={'0em'} p={2} pb={8} onChange={handleFileChange}></Input>
-            <Button onClick={handleUploadClick} p={2} mt={4} variant="solid" size="md">
-              Embed
-            </Button>
-          </Box> */}
+            <Link href={REACT_APP_NOTION_AUTH_URL} isExternal>
+                Opt-in <ExternalLinkIcon mx='2px' />
+            </Link>
+          </Box>
 
 
         </Stack>

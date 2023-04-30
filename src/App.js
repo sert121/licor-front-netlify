@@ -75,7 +75,7 @@ return(
   <Route exact path="/" element={<SessionAuth>
   <ChakraProvider>
     <SidebarWithHeader>
-    <UploadStuff></UploadStuff>
+    {/* <UploadStuff></UploadStuff> */}
       <HomeSearch></HomeSearch>
     </SidebarWithHeader>
     
