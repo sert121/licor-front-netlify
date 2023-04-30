@@ -9,7 +9,6 @@ import {
   VStack,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   Text,
@@ -37,6 +36,7 @@ import { ReactText } from 'react';
 import { signOut } from "supertokens-auth-react/recipe/passwordless";
 import { useToast } from '@chakra-ui/react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 import {useSearchParams} from 'react-router-dom';
@@ -158,7 +158,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
 const NavItem = ({ icon, href, children, ...rest }) => {
   return (
-    <Link href={href} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link to={href} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
       <Flex
         align="center"
         p="4"
