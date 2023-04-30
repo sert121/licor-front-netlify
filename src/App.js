@@ -60,7 +60,7 @@ function App() {
 return(
 
 <SuperTokensWrapper>
-  <HashRouter>
+  <BrowserRouter>
   <Routes>
 
     <Route exact path="integrations" element={
@@ -90,7 +90,7 @@ return(
  
   </Routes>
 
-  </HashRouter>
+  </BrowserRouter>
 </SuperTokensWrapper>
 
 );
