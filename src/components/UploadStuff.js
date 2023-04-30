@@ -17,7 +17,7 @@ import React from 'react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom';
 
-import {Link as ChaLink} from 'chakra-ui/react';
+import {Link as ChaLink} from '@chakra-ui/react';
 
 
 import { useToast } from '@chakra-ui/react'
