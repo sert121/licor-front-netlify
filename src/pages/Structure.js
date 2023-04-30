@@ -37,6 +37,9 @@ import { ReactText } from 'react';
 import { signOut } from "supertokens-auth-react/recipe/passwordless";
 
 
+import React, { useEffect } from 'react';
+import {useSearchParams} from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
 
 const LinkItems= [
