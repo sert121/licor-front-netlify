@@ -35,6 +35,8 @@ import {
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import { signOut } from "supertokens-auth-react/recipe/passwordless";
+import { useToast } from '@chakra-ui/react'
+import axios from 'axios';
 
 
 import {useSearchParams} from 'react-router-dom';
