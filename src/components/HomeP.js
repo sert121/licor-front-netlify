@@ -176,7 +176,8 @@ export default function HomeSearch() {
                   <SearchMainCard
                     summary_text={cards[0].summary}
                     body_text={cards[0].page_content}
-                    badge_text={'Local'}
+                    url = {cards[0].url}
+                    badge_text={ card.type=='' ? 'Local' :card.type }
                     onClick={handleMainCard}
                     />
                     { (cards.length) > 1 ?
@@ -184,8 +185,9 @@ export default function HomeSearch() {
                           { cards.slice(1).map((card) => (
                             <SearchResultCard
                             summary_text={card.summary}
+                            url = {card.url=='' ? 'notion.com' : card.url}
                             body_text={card.page_content}
-                            badge_text={'Local'}/>     
+                            badge_text={ card.type=='' ? 'Local' :card.type }/>     
                             ))
                           }
                         </>

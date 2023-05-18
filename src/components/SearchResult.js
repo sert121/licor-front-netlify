@@ -17,9 +17,11 @@ import {
     CardBody
   } from '@chakra-ui/react';
   
+
+import { Link as ExtLink} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-  export default function SearchResultCard({title_text,summary_text, body_text, badge_text, badge_color }) {
+  export default function SearchResultCard({title_text,summary_text, body_text, badge_text,url, badge_color }) {
     return (
         <>
         <Card  backdropFilter="blur(5px)" size={'md'} as={motion.div}  variant={'outline'} whileHover={{ scale: 1.05 }}  transition='0.1s linear' animate={{y:-20}}>
@@ -39,7 +41,8 @@ import { motion } from "framer-motion";
             <HStack>
                 <HStack>
                 <Button colorScheme='purple' size={'sm'} variant='outline'> Chat with Doc </Button>
-                <Button size={'sm'}  colorScheme='purple' variant='ghost'> Preview Document </Button>
+                {/* <Button size={'sm'}  colorScheme='purple' variant='ghost'> Preview Document </Button> */}
+                <ExtLink href={url} isExternal> <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
                 </HStack>
             </HStack>
         </CardFooter>

@@ -20,13 +20,16 @@ import {
   } from '@chakra-ui/react';
   
 // import react
+
+import { Link as ExtLink} from "@chakra-ui/react";
+
 import React from 'react';
 //   import motion from framer
 import { motion } from "framer-motion";
 import ModalCard from './Modal';
 
 
-  export default function SearchMainCard({heading_text,number,summary_text, body_text, badge_text  }) {
+  export default function SearchMainCard({heading_text,number,summary_text, body_text,url, badge_text  }) {
 
     const [isExpanded, setIsExpanded] = React.useState(false);
     const [modalVisible, setModalVisible] = React.useState(false)
@@ -83,7 +86,8 @@ import ModalCard from './Modal';
                     <HStack>
 
                     <Button size={'sm'} onClick={handleToggle} colorScheme='blue' variant='ghost'> Show {isExpanded ? 'Less' : 'More'} </Button>
-                    <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> { preview ?  'Hide Source' : 'Preview Source'} </Button>
+                    {/* <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> { preview ?  'Hide Source' : 'Preview Source'} </Button> */}
+                    <ExtLink href={url} isExternal> <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
                     </HStack>
                     {/* <HStack>
                         <Button size={'sm'}  colorScheme='purple' variant='ghost' onClick={handleClick}> Expand </Button>
