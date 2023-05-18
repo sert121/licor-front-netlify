@@ -177,7 +177,7 @@ export default function HomeSearch() {
                     summary_text={cards[0].summary}
                     body_text={cards[0].page_content}
                     url = {cards[0].url}
-                    badge_text={ card.type=='' ? 'Local' :card.type }
+                    badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
                     onClick={handleMainCard}
                     />
                     { (cards.length) > 1 ?
