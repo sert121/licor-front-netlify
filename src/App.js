@@ -56,7 +56,9 @@ SuperTokens.init({
 
 
 function App() {
-
+  localStorage.setItem('chakra-ui-color-mode', 'dark');
+  // localStorage.removeItem('chakra-ui-color-mode');
+  let { colorMode, toggleColorMode } = useColorMode('dark')
 return(
 
 <SuperTokensWrapper>
