@@ -87,7 +87,7 @@ import ModalCard from './Modal';
 
                     <Button size={'sm'} onClick={handleToggle} colorScheme='blue' variant='ghost'> Show {isExpanded ? 'Less' : 'More'} </Button>
                     {/* <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> { preview ?  'Hide Source' : 'Preview Source'} </Button> */}
-                    <ExtLink href={url} isExternal> <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
+                    <ExtLink href={url} isExternal> <Button colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
                     </HStack>
                     {/* <HStack>
                         <Button size={'sm'}  colorScheme='purple' variant='ghost' onClick={handleClick}> Expand </Button>

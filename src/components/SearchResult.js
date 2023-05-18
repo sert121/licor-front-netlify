@@ -42,7 +42,7 @@ import { motion } from "framer-motion";
                 <HStack>
                 <Button colorScheme='purple' size={'sm'} variant='outline'> Chat with Doc </Button>
                 {/* <Button size={'sm'}  colorScheme='purple' variant='ghost'> Preview Document </Button> */}
-                <ExtLink href={url} isExternal> <Button onClick={handlePreview} colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
+                <ExtLink href={url} isExternal> <Button colorScheme='blue' size={'sm'} variant='outline'> Preview </Button></ExtLink>
                 </HStack>
             </HStack>
         </CardFooter>
