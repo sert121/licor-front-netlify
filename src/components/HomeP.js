@@ -174,12 +174,21 @@ export default function HomeSearch() {
 
                 <>
                   <SearchMainCard
-                    summary_text={cards[0].summary}
-                    body_text={cards[0].page_content}
-                    url = {cards[0].url}
-                    badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
+                    summary_text={"RLHF stands for Reinforcement Learning from Human Feedback. It is a type of artificial intelligence (AI) training technique that involves using feedback from human users to improve the performance of the AI system . RLHF is commonly used to train large language models, such as those used in natural language processing and machine translation. By incorporating feedback from humans, RLHF can help improve the accuracy, relevance, and overall quality of AI-generated outputs."}
+                    body_text={"RLHF stands for Reinforcement Learning from Human Feedback. It is a type of artificial intelligence (AI) training technique that involves using feedback from human users to improve the performance of the AI system . RLHF is commonly used to train large language models, such as those used in natural language processing and machine translation. By incorporating feedback from humans, RLHF can help improve the accuracy, relevance, and overall quality of AI-generated outputs."}
+                    url = {"https://yashmore.notion.site/RLHF-5b3788bfb4ea4e4faa037aff4f2488af"}
+                    badge_text={'Notion'}
+                    // badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
                     onClick={handleMainCard}
                     />
+                    <SearchMainCard>
+                      summary_text={'DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF.'}
+                      body_text={'DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF.'}
+                      badge_text={'Notion'}
+                      url={"https://yashmore.notion.site/RLHF-5b3788bfb4ea4e4faa037aff4f2488af"}
+                      onClick={handleMainCard}
+                    </SearchMainCard>
+
                     { (cards.length) > 1 ?
                         <>
                           { cards.slice(1).map((card) => (
