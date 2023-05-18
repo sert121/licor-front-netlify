@@ -238,7 +238,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://static.wikia.nocookie.net/logopedia/images/6/6f/Radioheadmodifiedbear.svg'
+                    'https://seeklogo.com/images/R/radiohead-logo-90E6B1134B-seeklogo.com.png'
                   }
                 />
                 <VStack
