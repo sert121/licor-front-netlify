@@ -181,13 +181,13 @@ export default function HomeSearch() {
                     // badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
                     onClick={handleMainCard}
                     />
-                    <SearchMainCard>
+                    <SearchMainCard
                       summary_text={"DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF."}
                       body_text={"DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF."}
                       badge_text={"Notion"}
                       url={"https://yashmore.notion.site/RLHF-5b3788bfb4ea4e4faa037aff4f2488af"}
-                      onClick={handleMainCard}
-                    </SearchMainCard>
+                      onClick={handleMainCard} 
+                      />
 
                     { (cards.length) > 1 ?
                         <>
