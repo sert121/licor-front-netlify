@@ -185,7 +185,7 @@ export default function HomeSearch() {
                       summary_text={"DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF."}
                       body_text={"DeepSpeed-HE is also aware of the full RLHF pipeline, allowing it to make optimal decisions in terms of memory management and data movement across different phases of RLHF."}
                       badge_text={"Notion"}
-                      url={"https://yashmore.notion.site/RLHF-5b3788bfb4ea4e4faa037aff4f2488af"}
+                      url={"https://yashmore.notion.site/DeepSpeed-RLHF-30a14ffb89f9436383f6f4a0bc77e347"}
                       onClick={handleMainCard} 
                       />
 
