@@ -57,7 +57,7 @@ import ModalCard from './Modal';
             <Card size={'lg'} as={motion.div} transition='0.1s linear' animate={{y:-20}}>
                 <CardHeader paddingBottom={0}>
                     <HStack> 
-                        <Heading size='md'>Result</Heading> <Badge  fontSize={'0.8em'} variant={'subtle'} colorScheme='pink'>Local</Badge></HStack>
+                        <Heading size='md'>Result</Heading> <Badge  fontSize={'0.8em'} variant={'subtle'} colorScheme='pink'>{badge_text}</Badge></HStack>
          
                 </CardHeader>
             <CardBody margin={0}>
