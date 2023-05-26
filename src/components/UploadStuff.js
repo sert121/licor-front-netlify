@@ -32,7 +32,6 @@ export default function UploadStuff() {
     const handleFileChange = (e) => {
       if (e.target.files) {
         setFile(e.target.files[0]);
-        console.log('bhai')
         console.log(e.target.files[0])
       }
     };
@@ -74,8 +73,9 @@ export default function UploadStuff() {
             width="100%"
             height="20vh"
             alignItems="space-between"
+            bgColor={'#2D3748'}
           >
-            <Text fontSize="md" fontWeight="bold" color="blue.800" pb={2}>
+            <Text fontSize="md" fontWeight="bold" color="white" pb={2}>
                 Add Local Notes
             </Text>
             <Input type={'file'} borderWidth={'0em'} p={2} pb={8} onChange={handleFileChange}></Input>
@@ -95,8 +95,9 @@ export default function UploadStuff() {
             width="100%"
             height="20vh"
             alignItems="space-between"
+            bgColor={'#2D3748'}
           >
-            <Text fontSize="md" fontWeight="bold" color="blue.700" pb={2}>
+            <Text fontSize="md" fontWeight="bold" color="white" pb={2}>
                 Integrate Notion
             </Text>
 
