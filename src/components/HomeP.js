@@ -173,7 +173,7 @@ export default function HomeSearch() {
            { (cards!==[] && cards.length > 0) ?
 
                 <>
-                  <SearchMainCard
+                  {/* <SearchMainCard
                     summary_text={"RLHF stands for Reinforcement Learning from Human Feedback. It is a type of artificial intelligence (AI) training technique that involves using feedback from human users to improve the performance of the AI system . RLHF is commonly used to train large language models, such as those used in natural language processing and machine translation. By incorporating feedback from humans, RLHF can help improve the accuracy, relevance, and overall quality of AI-generated outputs."}
                     body_text={"RLHF stands for Reinforcement Learning from Human Feedback. It is a type of artificial intelligence (AI) training technique that involves using feedback from human users to improve the performance of the AI system . RLHF is commonly used to train large language models, such as those used in natural language processing and machine translation. By incorporating feedback from humans, RLHF can help improve the accuracy, relevance, and overall quality of AI-generated outputs."}
                     url = {"https://yashmore.notion.site/RLHF-5b3788bfb4ea4e4faa037aff4f2488af"}
@@ -187,6 +187,12 @@ export default function HomeSearch() {
                       badge_text={"Notion"}
                       url={"https://yashmore.notion.site/DeepSpeed-RLHF-30a14ffb89f9436383f6f4a0bc77e347"}
                       onClick={handleMainCard} 
+                      /> */}
+                      <SearchMainCard
+                      summary_text={cards[0].summary}
+                      body_text={cards[0].page_content}
+                      badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
+                      onClick={handleMainCard}
                       />
 
                     { (cards.length) > 1 ?
