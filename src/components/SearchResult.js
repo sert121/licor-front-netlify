@@ -18,7 +18,7 @@ import {
     CardBody
   } from '@chakra-ui/react';
   
-
+import React from 'react';
 import { Link as ExtLink} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
