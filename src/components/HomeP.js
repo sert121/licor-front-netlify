@@ -169,7 +169,7 @@ export default function HomeSearch() {
                 <></>
 
               }
-
+  
            { (cards!==[] && cards.length > 0) ?
 
                 <>
@@ -190,6 +190,7 @@ export default function HomeSearch() {
                       /> */}
                       <SearchMainCard
                       summary_text={cards[0].summary}
+                      url = {cards[0].url=='' ? 'notion.com' : cards[0].url}
                       body_text={cards[0].page_content}
                       badge_text={ cards[0].type=='' ? 'Local' :cards[0].type }
                       onClick={handleMainCard}
